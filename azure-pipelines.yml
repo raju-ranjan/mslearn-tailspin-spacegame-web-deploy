@@ -1,6 +1,3 @@
-- stage: 'DeployDev'
-  displayName: 'Deploy to dev environment'
-  dependsOn: Build
      pool:
       vmImage: 'Ubuntu-16.04'
    
