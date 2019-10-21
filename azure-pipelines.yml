@@ -1,16 +1,12 @@
 - stage: 'DeployDev'
   displayName: 'Deploy to dev environment'
   dependsOn: Build
-  jobs:
-  - deployment: Deploy
-    pool:
+     pool:
       vmImage: 'Ubuntu-16.04'
-    environment: dev
+   
     variables:
     - group: 'Release Pipeline'
-    strategy:
-      runOnce:
-        deploy:
+   
           steps:
           - download: current
             artifact: drop
